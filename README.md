@@ -14,9 +14,11 @@ This CRM (Customer Relationship Management) CLI (Command Line Interface) applica
 
 ## Installation
 
-1. Clone the Repository
+1. **Clone the Repository**
 
-git clone https://github.com/ManojVamsi7/Qbits-Internship-assessment.git
+   ```bash
+   git clone https://github.com/ManojVamsi7/Qbits-Internship-assessment.git
+   cd qbitlearning_p01_sales_CLI
 
 3. Install Dependencies
 
