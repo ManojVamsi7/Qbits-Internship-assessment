@@ -17,8 +17,8 @@ This CRM (Customer Relationship Management) CLI (Command Line Interface) applica
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/Anilswami97/qbitlearning_p01_sales_CLI.git
-   cd qbitlearning_p01_sales_CLI
+https://github.com/ManojVamsi7/Qbits-Internship-assessment
+
 2. Install Dependencies
 
 Ensure you have Python installed on your system. Then, install the required Python packages:
