@@ -25,26 +25,41 @@ This CRM (Customer Relationship Management) CLI (Command Line Interface) applica
 Ensure you have Python installed on your system. Then, install the required Python packages:
 pip install -r requirements.txt
 should include:
-numpy
-pandas
-plotly
+
+1. numpy
+2. pandas
+3. plotly
 
 Run the Application
 
-bash
+  ```bash
+
 Copy code
+
 python main.py
+
 Usage
+
 Start the Application: Run python main.py.
+
 Choose Role:
+
 Select 1 if you are an existing user.
+
 Select 2 if you are a new user.
+
 For New Users:
+
 Enter your name, phone number, and email to create a new BDA account.
+
 For Existing Users:
+
 Enter your name and phone number to log in.
+
 BDA Panel:
+
 Choose from the available options to work on leads, view payouts, upload data to the database, or visualize lead data.
+
 Database Schema
 bda: Stores BDA user information.
 
