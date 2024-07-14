@@ -1,84 +1,77 @@
-# The Ultimate CLI based CRM 
-------
-## That allows you for basic Data Manipulationa and Visualization in Python
+# CRM CLI Application
 
-### Let's start with the tools, and modules used here:
+## Overview
 
-#### Modules:
-* sqlite3
-* Pandas
-* Numpy
-* Plotly
+This CRM (Customer Relationship Management) CLI (Command Line Interface) application is designed to help Business Development Associates (BDAs) manage their leads efficiently. The application includes functionalities for creating new users, managing leads, uploading data to a database, viewing payouts, and visualizing lead distribution.
 
-#### Tools:
-* Jupyter Notebook
-* VS Code
-* Git
-* GitHub
-* Terminal
-* Python
-------
+## Features
 
-## About
-------
+- **User Management**: Create new BDA users and log in existing users.
+- **Lead Management**: Assign, view, and update lead statuses.
+- **Database Integration**: Store and manage data in an SQLite database.
+- **Payout Calculation**: Calculate payouts based on lead conversions.
+- **Data Visualization**: Visualize lead distribution using pie charts.
 
-It provides a seamless experience throughout the entire program. You just need to execute the `main.py` file by running the following command in your terminal at the location of this folder:
-Command:
-```
-C:\User\app\projects\crm>py main.py
-```
-### From here, the major functionalities start:
+## Installation
 
-1. **Automatic Database Creation**: You don't need to create or run any explicit commands to create the crm.db database. The program will automatically check for its existence. If it doesn't exist, it will create it automatically, containing all the required tables to store your data.
+1. **Clone the Repository**
 
-2. **Optimized Database Querying**: We have minimized the frequency of database hits/queries, making the application more efficient.
+   ```bash
+   git clone https://github.com/Anilswami97/qbitlearning_p01_sales_CLI.git
+   cd qbitlearning_p01_sales_CLI
+2. Install Dependencies
 
-3. **Data Persistence**: Using Pandas and its data manipulation strategies, we have integrated a backup system for the CRM. The data will persist even if you close the program without saving or exiting it properly.
+Ensure you have Python installed on your system. Then, install the required Python packages:
+pip install -r requirements.txt
+should include:
+numpy
+pandas
+plotly
 
-4. **Efficient Data Management**: We have efficiently managed data recovery, user experience/interactivity, and file and database handling.
+Run the Application
 
-### Here are some image/screenshots to have a raw idea:
+bash
+Copy code
+python main.py
+Usage
+Start the Application: Run python main.py.
+Choose Role:
+Select 1 if you are an existing user.
+Select 2 if you are a new user.
+For New Users:
+Enter your name, phone number, and email to create a new BDA account.
+For Existing Users:
+Enter your name and phone number to log in.
+BDA Panel:
+Choose from the available options to work on leads, view payouts, upload data to the database, or visualize lead data.
+Database Schema
+bda: Stores BDA user information.
 
-1. **init.py**
+id: Unique identifier for the BDA.
+name: Name of the BDA.
+mobile: Mobile number of the BDA.
+email: Email address of the BDA.
+sales: Stores lead information.
 
-<img width="960" alt="init_py" src="https://github.com/user-attachments/assets/0fc1ce89-4498-43a6-b25e-ea830aabb885">
+id: Unique identifier for the lead.
+bda_id: Identifier of the BDA assigned to the lead.
+name: Name of the lead.
+mobile: Mobile number of the lead.
+lead_result: Result of the lead interaction.
+lead_status: Status of the lead (0 for unhandled, 1 for handled).
+created_at: Timestamp when the lead was created.
+bda_payouts: Stores payout information for BDAs.
 
-------
+id: Unique identifier for the payout.
+bda_id: Identifier of the BDA receiving the payout.
+payout_date: Date of the payout.
+remarks: Remarks about the payout.
+amount: Payout amount.
+Contribution
+Feel free to fork the repository and submit pull requests. For major changes, please open an issue to discuss what you would like to change.
 
-2. **main.py**
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-<img width="960" alt="main_py" src="https://github.com/user-attachments/assets/22d19b6b-5c66-448c-bc8d-4bb2adfb1e0c">
-
-------
-
-3. **Setting up**
-
-<img width="960" alt="setting_up" src="https://github.com/user-attachments/assets/626b9c39-111c-4ac0-b3e4-4d7b9861eb69">
-
-------
-
-4. **Creating a new user**
-
-<img width="960" alt="create_bda" src="https://github.com/user-attachments/assets/7e68c56c-aa70-4d5a-a8e6-13d004015f6f">
-
-------
-
-5. **Payouts**
-
-<img width="960" alt="payouts" src="https://github.com/user-attachments/assets/2d880aa9-127b-4c6b-98e6-6c8da7ae4448">
-
-------
-
-6. **Visualization**
-
-<img width="960" alt="visualize" src="https://github.com/user-attachments/assets/6eb51cd9-3efc-4cc4-8511-e132fbb5ac53">
-
-------
-
-
-#### So, this is how it ends🥂👩🏻‍💻.
-
-**Made with 🤍 by *Anil Swami***
-
-**Special Thanks to [QbitsLearning](https://www.qbitslearning.com/ "QbitLearning's Homepage") Community🤍 and [***Nitish Shetty Sir***](https://www.linkedin.com/in/nitish-m-setty-7a0206192/ "Nitish Shetty Sir")✨**
-
+Contact
+For any inquiries or feedback, please contact Manojvamsi07
