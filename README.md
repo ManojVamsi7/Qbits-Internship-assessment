@@ -83,6 +83,8 @@ bda_id: Identifier of the BDA receiving the payout.
 payout_date: Date of the payout.
 remarks: Remarks about the payout.
 amount: Payout amount.
+
+  ```
 Contribution
 Feel free to fork the repository and submit pull requests. For major changes, please open an issue to discuss what you would like to change.
 
