@@ -1,9 +1,3 @@
-"""
-Main.py: Business logic
-======
-- This file provides all the basic to advance functionlities to CRM CLI s/w.
-"""
-
 import os
 import uuid 
 import string 
@@ -16,17 +10,13 @@ import plotly.graph_objs as go
 from __init__ import create_db
 from plotly.subplots import make_subplots
 
-
-
 # File Handling
 def to_csv(df, path):
     df.to_csv(path, index=False)
 
-
 def read_csv(path):
     return pd.read_csv(path)
-
-
+    
 # Data Preprocessing
 def generate_leads():
     leads_no = np.random.randint(10, 50)
@@ -390,14 +380,11 @@ def handle_next_lead(unhandled_leads, util_args):
 
                     print()
                     # Save updated DataFrame back to CSV
-
-
                     print("|| SAVED ||")
                     print()
                     input("Press Enter to continue...")
-
-
-                    # Make Payment when there is no unhandled leads remaining.
+                    
+                  # Make Payment when there is no unhandled leads remaining.
                     if len(sales_df.loc[sales_df['lead_result'] == 'Unhandled', 'lead_result']) == 0:
                         update_query = """
                             UPDATE bda_payouts 
@@ -424,9 +411,7 @@ def handle_next_lead(unhandled_leads, util_args):
 def clear_scr():
     # Checking for the OS you are using to assign correct value to os.system()
     os.system('cls' if os.name == 'nt' else 'clear')
-
-
-
+    
 # Origin of the Entire CLI s/w : Main Function
 if __name__ == "__main__":
     if not os.path.exists("crm.db"):
@@ -471,7 +456,6 @@ if __name__ == "__main__":
         "name" : name,
         "cursor" : cursor
     }
-
 
     while True:
         
