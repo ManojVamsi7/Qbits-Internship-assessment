@@ -275,7 +275,6 @@ def display_menu(handled_leads, unhandled_leads, util_args):
     print(f"Handled Leads: {len(handled_leads)}    Unhandled Leads: {len(unhandled_leads)}")
     print("+---------------------------------------------------+")
 
-
 def display_leads(status):
     # Load data and split into handled and unhandled leads
     _, handled_leads, unhandled_leads = load_data()
@@ -312,7 +311,6 @@ def display_leads(status):
     clear_scr()
 
     print()
-
 
 def handle_next_lead(unhandled_leads, util_args):
     cursor = util_args.get("cursor")
@@ -400,12 +398,10 @@ def handle_next_lead(unhandled_leads, util_args):
                     clear_scr()
                     break
 
-
             except Exception as e:
                 print()
                 print("!! Invalid Option. Please choose from the given options !!")
                 print()
-
 
 # Method to Clear the Screen
 def clear_scr():
@@ -420,7 +416,6 @@ if __name__ == "__main__":
     # Connect the SQLite Database
     conn = sqlite3.connect("crm.db")
     cursor = conn.cursor()
-
 
     # Determine user role (existing or new user)
     option = choose_role()
@@ -447,8 +442,7 @@ if __name__ == "__main__":
         "lead_date" : [i[6] for i in data],
     })
     to_csv(sales_df, "sales.csv")
-
-
+    
     # make a dictionary to store some basic utilities
     util_args = {
         "rate" : 2000,   # price amount per converted lead
