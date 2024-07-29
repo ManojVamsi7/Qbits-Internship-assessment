@@ -9,7 +9,6 @@ The init.py file allow user to create database and tables.
   - sales: Stores all the handled and unhandled leads.
 """
 
-
 import sqlite3
 
 
